@@ -13,7 +13,8 @@ try:
         display_array = []
         guessed_letters = ""
 
-        word = list(input("input a word: "))
+        word_str = (input("input a word: "))
+        word = list(word_str)
         clear() #no peeking
 
         for i in word:
@@ -63,6 +64,8 @@ try:
             if over == True: #when you lose
                 if lives == 0: 
                     print("YOU LOSE")
+                    time.sleep(1)
+                    print(f"the word was {word_str}")
                 else:
                     print("YOU WIN")
                 
